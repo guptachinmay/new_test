@@ -1,0 +1,10 @@
+# Approach: 
+We will store by order in a max heap with by cost as a priority
+Similarly we will gonna store sellling order into a min heap with priority 
+As we insert any order into a map with key as a volume and value as the min heap in the case of selling order
+Similarly we will gonna insert buying order into map with key as volume and value as the max heap
+As we are storing the values into the map and heap data structure we will be able to lookup for the delete operation on the basis of volume and then we gonaa store buying and selling order as heap data structure
+
+## Solving multi-threadxixng issue
+We will gonna use the distributed lockin on the order ids at the time of addition and updation of the order
+So we can use redis distributed law because of low latency 
